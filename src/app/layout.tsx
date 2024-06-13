@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import ConvexClientProvider from "@/providers/ConvexClientProvider";
+
 import "./globals.css";
 
 const inter = Roboto({
@@ -85,7 +87,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <link rel="icon" href="/icons/logo.svg" />
         <title>{metadata.title}</title>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
+      </body>
     </html>
   );
 }
