@@ -8,13 +8,14 @@ import PodcastCard from "@/components/PodcastCard";
 import ProfileCard from "@/components/ProfileCard";
 import { api } from "@/convex/_generated/api";
 
-const ProfilePage = ({
-  params,
-}: {
+type ProfilePageProps = {
   params: {
     profileId: string;
   };
-}) => {
+};
+
+const ProfilePage = (props: ProfilePageProps) => {
+  const { params } = props;
   const user = useQuery(api.users.getUserById, {
     clerkId: params.profileId,
   });
