@@ -1,4 +1,5 @@
 import { ConvexError, v } from "convex/values";
+
 import { internalMutation, query } from "./_generated/server";
 
 export const getUserById = query({
@@ -37,7 +38,7 @@ export const getTopUserByPodcastCount = query({
           totalPodcasts: podcasts.length,
           podcast: sortedPodcasts.map((p) => ({
             podcastTitle: p.podcastTitle,
-            pocastId: p._id,
+            podcastId: p._id,
           })),
         };
       })

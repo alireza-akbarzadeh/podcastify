@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import ConvexClientProvider from "@/providers/ConvexClientProvider";
+import { ConvexClerkProvider } from "@/providers/ConvexClerkProvider";
 
 import "./globals.css";
 
@@ -88,7 +88,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <title>{metadata.title}</title>
       </head>
       <body className={inter.className}>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <ConvexClerkProvider>{children}</ConvexClerkProvider>
       </body>
     </html>
   );

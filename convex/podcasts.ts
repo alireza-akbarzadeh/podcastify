@@ -5,12 +5,12 @@ import { mutation, query } from "./_generated/server";
 // create podcast mutation
 export const createPodcast = mutation({
   args: {
-    audioStorageId: v.union(v.id("_storage"), v.null()),
+    audioStorageId: v.id("_storage"),
     podcastTitle: v.string(),
     podcastDescription: v.string(),
     audioUrl: v.string(),
     imageUrl: v.string(),
-    imageStorageId: v.union(v.id("_storage"), v.null()),
+    imageStorageId: v.id("_storage"),
     voicePrompt: v.string(),
     imagePrompt: v.string(),
     voiceType: v.string(),
